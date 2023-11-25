@@ -18,6 +18,7 @@ const allSesiones = async (req, res) => {
     })
 }
 
+
 const createSesiones = async (req, res) => {
     const {id_beneficiario, id_sesion, tipo_sesion,observacion, fecha, token} = req.body;
     const decoded = jwt.verify(token, process.env.SECRET);
