@@ -51,7 +51,7 @@ const createRoles = async (req, res) =>{
 
 const updateRoles = async (req, res) => {
     const {ID_ROLES, NOMBRE_ROL,CREAR_BENE,ACTUALIZA_BENE,INHABILITAR_BENE,CREAR_AREAS,BORRAR_AREAS,ACTUALIZAR_AREAS,CREAR_USUARIOS,INHABILITAR_USUARIOS,ACTUALIZAR_USUARIOS,CREAR_SESIONES,ACTUALIZAR_SESIONES,BORRAR_SESIONES,VER_REPORTES,VER_BENEFICIARIOS,VER_USUARIOS,VER_SESIONES, VER_AREAS} = req.body;
-    
+    console.log(req.body)
     connection.query(`UPDATE ROLES SET nombre_rol = '${NOMBRE_ROL}' WHERE id_roles = ${ID_ROLES}`, (error, results) => {
         if(error){
             console.log(error);
